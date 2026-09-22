@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=Dancing+Script:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+@keyframes pulseGlow{0%,100%{transform:scale(1);opacity:0.9;filter:drop-shadow(0 0 25px rgba(250,204,21,0.7));}50%{transform:scale(1.06);opacity:1;filter:drop-shadow(0 0 45px rgba(250,204,21,0.95));}}
+@keyframes rotateSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes flyBirds{0%{transform:translate(-15vw,0) scale(1.1);}50%{transform:translate(48vw,-28px) scale(1.25);}100%{transform:translate(118vw,-50px) scale(1.1);}}
+@keyframes wingFlap{0%,100%{transform:scaleY(1);}50%{transform:scaleY(0.35);}}
+@keyframes floatSmoke{0%{transform:translateY(0) scale(0.8);opacity:0.65;}50%{transform:translateY(-12px) translateX(4px) scale(1.1);opacity:0.35;}100%{transform:translateY(-24px) translateX(8px) scale(1.4);opacity:0;}}
+@keyframes petBreathe{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-2.5px) scale(1.015);}}
+@keyframes tailWag{0%,100%{transform:rotate(0deg);}50%{transform:rotate(14deg);}}
+@keyframes earTwitch{0%,90%,100%{transform:rotate(0deg);}93%{transform:rotate(-6deg);}97%{transform:rotate(6deg);}}
+@keyframes auraPulse{0%,100%{box-shadow:0 20px 50px rgba(250,204,21,0.22), 0 10px 25px rgba(254,147,44,0.12);}50%{box-shadow:0 25px 65px rgba(250,204,21,0.38), 0 15px 35px rgba(254,147,44,0.22);}}
+
+/* 1. Animaciones específicas y naturales para cada animalito */
+/* Conejito blanco: Brincos tiernos y saltitos X-Y con pausas curiosas */
+@keyframes bunnyHopPaced {
+  0%, 100% { transform: translateX(0) translateY(0) scaleX(1); }
+  6% { transform: translateX(5px) translateY(-9px) scaleX(1); }
+  12% { transform: translateX(11px) translateY(0) scaleX(1); }
+  17% { transform: translateX(17px) translateY(-10px) scaleX(1); }
+  24% { transform: translateX(23px) translateY(0) scaleX(1); }
+  34% { transform: translateX(23px) translateY(0) scaleX(1); } /* pausa curiosa */
+  38% { transform: translateX(23px) translateY(0) scaleX(-1); } /* se da vuelta */
+  45% { transform: translateX(16px) translateY(-9px) scaleX(-1); }
+  52% { transform: translateX(9px) translateY(0) scaleX(-1); }
+  59% { transform: translateX(3px) translateY(-10px) scaleX(-1); }
+  66% { transform: translateX(-4px) translateY(0) scaleX(-1); }
+  78% { transform: translateX(-4px) translateY(0) scaleX(-1); } /* olfatea */
+  82% { transform: translateX(-4px) translateY(0) scaleX(1); } /* gira */
+  89% { transform: translateX(-1px) translateY(-7px) scaleX(1); }
+  95% { transform: translateX(0) translateY(0) scaleX(1); }
+}
+
+/* Gatito negro: Desplazamiento sigiloso, vaivén felino y pausas atentas */
+@keyframes catProwlSmooth {
+  0%, 100% { transform: translateX(0) scaleX(1); }
+  10% { transform: translateX(8px) translateY(-2px) scaleX(1) rotate(1.5deg); }
+  22% { transform: translateX(20px) translateY(0) scaleX(1) rotate(0deg); }
+  32% { transform: translateX(28px) translateY(-1.5px) scaleX(1) rotate(-1deg); }
+  42% { transform: translateX(30px) translateY(0) scaleX(1); } /* pausa para observar */
+  48% { transform: translateX(30px) translateY(0) scaleX(-1); } /* gira suavemente */
+  58% { transform: translateX(20px) translateY(-2px) scaleX(-1) rotate(-1.5deg); }
+  70% { transform: translateX(10px) translateY(0) scaleX(-1) rotate(0deg); }
+  82% { transform: translateX(0px) translateY(-1.5px) scaleX(-1) rotate(1deg); }
+  90% { transform: translateX(-2px) translateY(0) scaleX(-1); } /* pausa */
+  95% { transform: translateX(-1px) translateY(0) scaleX(1); }
+}
+
+/* Pitbull negro: Trote alegre, firme y seguro con balanceo firme */
+@keyframes pitbullTrotting {
+  0%, 100% { transform: translateX(0) translateY(0) scaleX(1); }
+  12% { transform: translateX(10px) translateY(-4px) scaleX(1) rotate(1.5deg); }
+  24% { transform: translateX(22px) translateY(0) scaleX(1) rotate(0deg); }
+  36% { transform: translateX(32px) translateY(-4px) scaleX(1) rotate(1.5deg); }
+  46% { transform: translateX(36px) translateY(0) scaleX(1); } /* parada noble */
+  50% { transform: translateX(36px) translateY(0) scaleX(-1); } /* gira */
+  62% { transform: translateX(24px) translateY(-4px) scaleX(-1) rotate(-1.5deg); }
+  74% { transform: translateX(12px) translateY(0) scaleX(-1) rotate(0deg); }
+  86% { transform: translateX(2px) translateY(-4px) scaleX(-1) rotate(-1.5deg); }
+  94% { transform: translateX(0) translateY(0) scaleX(-1); }
+  98% { transform: translateX(0) translateY(0) scaleX(1); }
+}
+
+/* Pug beige: Bamboleo rechoncho (waddle) adorable con contoneo */
+@keyframes pugWaddleJoy {
+  0%, 100% { transform: translateX(0) translateY(0) rotate(0deg) scaleX(1); }
+  10% { transform: translateX(6px) translateY(-3px) rotate(4deg) scaleX(1); }
+  20% { transform: translateX(14px) translateY(0) rotate(-4deg) scaleX(1); }
+  30% { transform: translateX(22px) translateY(-3px) rotate(4deg) scaleX(1); }
+  40% { transform: translateX(26px) translateY(0) rotate(0deg) scaleX(1); } /* descanso feliz */
+  45% { transform: translateX(26px) translateY(0) scaleX(-1); } /* se voltea */
+  55% { transform: translateX(18px) translateY(-3px) rotate(-4deg) scaleX(-1); }
+  65% { transform: translateX(10px) translateY(0) rotate(4deg) scaleX(-1); }
+  75% { transform: translateX(2px) translateY(-3px) rotate(-4deg) scaleX(-1); }
+  85% { transform: translateX(-2px) translateY(0) rotate(0deg) scaleX(-1); }
+  92% { transform: translateX(-1px) translateY(0) scaleX(1); }
+}
+
+/* Gallito 1: Pasitos rápidos, giros y picoteo rítmico */
+@keyframes roosterWalkPeck {
+  0%, 100% { transform: translateX(0) translateY(0) rotate(0deg) scaleX(1); }
+  8% { transform: translateX(5px) translateY(-3px) rotate(3deg) scaleX(1); }
+  16% { transform: translateX(12px) translateY(0) rotate(0deg) scaleX(1); }
+  22% { transform: translateX(14px) translateY(2px) rotate(14deg) scaleX(1); } /* picotea */
+  28% { transform: translateX(14px) translateY(0) rotate(0deg) scaleX(1); }
+  34% { transform: translateX(14px) translateY(2px) rotate(16deg) scaleX(1); } /* picotea */
+  40% { transform: translateX(14px) translateY(0) rotate(0deg) scaleX(-1); } /* gira */
+  48% { transform: translateX(8px) translateY(-3px) rotate(-3deg) scaleX(-1); }
+  56% { transform: translateX(2px) translateY(0) rotate(0deg) scaleX(-1); }
+  64% { transform: translateX(0px) translateY(2px) rotate(-14deg) scaleX(-1); } /* picotea */
+  74% { transform: translateX(0px) translateY(0) rotate(0deg) scaleX(1); }
+  85% { transform: translateX(-3px) translateY(-2px) rotate(2deg) scaleX(1); }
+  92% { transform: translateX(0) translateY(0) rotate(0deg) scaleX(1); }
+}
+
+/* Gallinita: Cabeceo tierno, pequeños pasos comedidos y picoteos suaves */
+@keyframes henPeckSteps {
+  0%, 100% { transform: translateX(0) translateY(0) rotate(0deg) scaleX(1); }
+  10% { transform: translateX(4px) translateY(-2px) rotate(2deg) scaleX(1); }
+  20% { transform: translateX(8px) translateY(0) rotate(0deg) scaleX(1); }
+  26% { transform: translateX(9px) translateY(2.5px) rotate(10deg) scaleX(1); }
+  32% { transform: translateX(9px) translateY(0) rotate(0deg) scaleX(1); }
+  42% { transform: translateX(9px) translateY(2.5px) rotate(12deg) scaleX(1); }
+  50% { transform: translateX(9px) translateY(0) rotate(0deg) scaleX(-1); }
+  60% { transform: translateX(5px) translateY(-2px) rotate(-2deg) scaleX(-1); }
+  70% { transform: translateX(1px) translateY(0) rotate(0deg) scaleX(-1); }
+  78% { transform: translateX(0) translateY(2px) rotate(-10deg) scaleX(-1); }
+  88% { transform: translateX(0) translateY(0) rotate(0deg) scaleX(1); }
+}
+
+/* Gallito 2: Picoteo activo y pequeños brinquitos con giros ágiles */
+@keyframes rooster2ActivePeck {
+  0%, 100% { transform: translateX(0) translateY(0) rotate(0deg) scaleX(1); }
+  7% { transform: translateX(-5px) translateY(-3px) rotate(-4deg) scaleX(1); }
+  14% { transform: translateX(-10px) translateY(0) rotate(0deg) scaleX(1); }
+  20% { transform: translateX(-11px) translateY(2.5px) rotate(15deg) scaleX(1); }
+  26% { transform: translateX(-11px) translateY(0) rotate(0deg) scaleX(1); }
+  34% { transform: translateX(-6px) translateY(-3px) rotate(3deg) scaleX(1); }
+  42% { transform: translateX(0px) translateY(0) rotate(0deg) scaleX(-1); }
+  50% { transform: translateX(5px) translateY(-3px) rotate(-3deg) scaleX(-1); }
+  58% { transform: translateX(9px) translateY(0) rotate(0deg) scaleX(-1); }
+  66% { transform: translateX(10px) translateY(2.5px) rotate(-15deg) scaleX(-1); }
+  74% { transform: translateX(10px) translateY(0) rotate(0deg) scaleX(1); }
+  86% { transform: translateX(4px) translateY(-2px) rotate(2deg) scaleX(1); }
+  94% { transform: translateX(0) translateY(0) rotate(0deg) scaleX(1); }
+}
+
+.sun-rotate{animation:rotateSlow 40s linear infinite;}
+.sun-pulse{animation:pulseGlow 5s ease-in-out infinite;}
+.bird-flight{animation:flyBirds 24s cubic-bezier(0.4,0,0.6,1) infinite;}
+.wing{animation:wingFlap 0.65s ease-in-out infinite;transform-origin:center;}
+.smoke-puff-1{animation:floatSmoke 3s ease-out infinite;}
+.smoke-puff-2{animation:floatSmoke 3s 1.5s ease-out infinite;}
+.anim-breathe{animation:petBreathe 3.5s ease-in-out infinite;}
+.anim-tail{animation:tailWag 1.4s ease-in-out infinite;transform-origin:bottom left;}
+.anim-ears{animation:earTwitch 4s ease-in-out infinite;transform-origin:bottom center;}
+.aura-glow{animation:auraPulse 4.5s ease-in-out infinite;}
+
+/* Clases animadas de animales */
+.anim-bunny-move{animation:bunnyHopPaced 7.5s ease-in-out infinite;transform-origin:bottom center;}
+.anim-cat-move{animation:catProwlSmooth 9s ease-in-out infinite;transform-origin:bottom center;}
+.anim-pitbull-move{animation:pitbullTrotting 8.5s ease-in-out infinite;transform-origin:bottom center;}
+.anim-pug-move{animation:pugWaddleJoy 6.8s ease-in-out infinite;transform-origin:bottom center;}
+.anim-rooster1-move{animation:roosterWalkPeck 6.2s ease-in-out infinite;transform-origin:bottom center;}
+.anim-hen-move{animation:henPeckSteps 7s ease-in-out infinite;transform-origin:bottom center;}
+.anim-rooster2-move{animation:rooster2ActivePeck 5.8s ease-in-out infinite;transform-origin:bottom center;}
+
+/* Transiciones Románticas de Tarjetas */
+.card-romantic-enter {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
+  transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+.card-romantic-exit {
+  opacity: 0 !important;
+  transform: translateY(-18px) scale(0.95) !important;
+  pointer-events: none !important;
+  transition: opacity 0.38s cubic-bezier(0.4, 0, 0.2, 1), transform 0.38s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.card-romantic-initial {
+  opacity: 0;
+  transform: translateY(22px) scale(0.95);
+  pointer-events: none;
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'secondary': '#904d00', 'on-secondary-fixed-variant': '#6e3900', 'surface-container-high': '#ece8d9', 'tertiary-fixed': '#95f8a7', 'tertiary': '#006d30', 'surface-variant': '#e6e3d3', 'on-error-container': '#93000a', 'on-primary-container': '#6c5700', 'on-primary': '#ffffff', 'outline-variant': '#d1c6ab', 'on-surface-variant': '#4d4632', 'primary': '#735c00', 'inverse-primary': '#eec200', 'error': '#ba1a1a', 'on-surface': '#1c1c13', 'primary-fixed-dim': '#eec200', 'surface-bright': '#fdf9e9', 'secondary-fixed': '#ffdcc3', 'surface-container-lowest': '#ffffff', 'inverse-on-surface': '#f5f1e1', 'on-tertiary-fixed-variant': '#005323', 'surface-container': '#f2eede', 'surface-container-highest': '#e6e3d3', 'on-tertiary': '#ffffff', 'background': '#fdf9e9', 'on-tertiary-container': '#00682e', 'primary-fixed': '#ffe083', 'on-error': '#ffffff', 'surface-dim': '#dedacb', 'surface': '#fdf9e9', 'inverse-surface': '#323126', 'secondary-container': '#fe932c', 'outline': '#7f7660', 'on-tertiary-fixed': '#00210a', 'surface-container-low': '#f8f4e4', 'on-secondary': '#ffffff', 'on-secondary-container': '#663500', 'surface-tint': '#735c00', 'primary-container': '#facc15', 'on-background': '#1c1c13', 'tertiary-container': '#84e696', 'tertiary-fixed-dim': '#79db8d', 'secondary-fixed-dim': '#ffb77d', 'on-secondary-fixed': '#2f1500', 'on-primary-fixed': '#231b00', 'on-primary-fixed-variant': '#574500', 'error-container': '#ffdad6' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'space-md': '1rem', 'space-xl': '2.5rem', 'space-sm': '0.5rem', 'gutter': '1.25rem', 'margin-mobile': '1rem', 'margin': '2rem', 'gutter-mobile': '0.75rem', 'space-lg': '1.5rem', 'space-xs': '0.25rem' }, 'fontFamily': { 'display-lg': ['Epilogue'], 'headline-lg': ['Epilogue'], 'label-md': ['Plus Jakarta Sans'], 'headline-sm': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Epilogue'], 'label-lg': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Epilogue'], 'body-md': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'], 'headline-md': ['Epilogue'], 'label-sm': ['Plus Jakarta Sans'], 'body-sm': ['Plus Jakarta Sans'], 'romantic': ['"Dancing Script"', 'cursive'], 'sans-accent': ['"Poppins"', 'sans-serif'] }, 'fontSize': { 'display-lg': ['48px', { 'lineHeight': '56px', 'letterSpacing': '-0.02em', 'fontWeight': '700' }], 'headline-lg': ['32px', { 'lineHeight': '40px', 'fontWeight': '600' }], 'label-md': ['12px', { 'lineHeight': '16px', 'letterSpacing': '0.02em', 'fontWeight': '600' }], 'headline-sm': ['20px', { 'lineHeight': '28px', 'fontWeight': '600' }], 'display-lg-mobile': ['34px', { 'lineHeight': '42px', 'letterSpacing': '-0.01em', 'fontWeight': '700' }], 'label-lg': ['14px', { 'lineHeight': '20px', 'letterSpacing': '0.01em', 'fontWeight': '600' }], 'headline-lg-mobile': ['26px', { 'lineHeight': '34px', 'fontWeight': '600' }], 'body-md': ['15px', { 'lineHeight': '24px', 'fontWeight': '400' }], 'body-lg': ['18px', { 'lineHeight': '28px', 'fontWeight': '400' }], 'headline-md': ['24px', { 'lineHeight': '32px', 'fontWeight': '600' }], 'label-sm': ['11px', { 'lineHeight': '14px', 'fontWeight': '500' }], 'body-sm': ['13px', { 'lineHeight': '20px', 'fontWeight': '400' }] } } } }</script></head><body class="bg-background font-body-md text-on-surface relative min-h-screen selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden"><div class="fixed inset-0 pointer-events-none z-0 bg-gradient-to-b from-[#FFFDF0] via-[#FDF6D8] to-[#FCE7BA]"></div><!-- SOL ILUSTRADO CON TAMAÑO RESPONSIVO --><div class="fixed top-14 right-2 sm:top-4 sm:right-6 md:top-6 md:right-8 pointer-events-none z-10"><div class="relative flex items-center justify-center w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 sun-pulse"><svg class="absolute inset-0 w-full h-full text-primary-container opacity-60 sun-rotate" fill="currentColor" viewbox="0 0 100 100"><circle cx="50" cy="50" fill="#FACC15" r="22"></circle><g stroke="#FACC15" stroke-linecap="round" stroke-width="3"><line x1="50" x2="50" y1="10" y2="19"></line><line x1="50" x2="50" y1="81" y2="90"></line><line x1="10" x2="19" y1="50" y2="50"></line><line x1="81" x2="90" y1="50" y2="50"></line><line x1="22" x2="28" y1="22" y2="28"></line><line x1="72" x2="78" y1="72" y2="78"></line><line x1="22" x2="28" y1="78" y2="72"></line><line x1="72" x2="78" y1="28" y2="22"></line></g></svg><div class="w-10 h-10 sm:w-14 sm:h-14 md:w-18 md:h-18 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-200 shadow-[0_0_35px_rgba(250,204,21,0.85)]"></div></div></div><!-- AVES NOTABLEMENTE MÁS GRANDES (Escala 1.8x - 2x con aleteo suave y vuelo majestuoso) --><div class="fixed top-16 sm:top-20 -left-36 pointer-events-none z-10 bird-flight flex items-center gap-7 sm:gap-9"><div class="filter drop-shadow-sm"><svg class="w-14 sm:w-18 md:w-22 h-10 sm:h-13 md:h-16 text-on-surface-variant/65 wing" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" viewbox="0 0 40 24"><path d="M2 17C10 5 15 5 20 13C25 5 30 5 38 17"></path><path d="M19 13C19.5 16 20 18 20.5 19.5" stroke-width="2"></path></svg></div><div class="filter drop-shadow-sm translate-y-4 sm:translate-y-5"><svg class="w-10 sm:w-13 md:w-16 h-8 sm:h-10 md:h-12 text-on-surface-variant/50 wing" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" style="animation-delay: -0.3s;" viewbox="0 0 40 24"><path d="M2 17C10 5 15 5 20 13C25 5 30 5 38 17"></path><path d="M19 13C19.5 16 20 18 20.5 19.5" stroke-width="1.8"></path></svg></div><div class="filter drop-shadow-sm -translate-y-2 hidden xs:block"><svg class="w-8 sm:w-10 md:w-12 h-6 sm:h-8 md:h-9 text-on-surface-variant/40 wing" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" style="animation-delay: -0.5s;" viewbox="0 0 40 24"><path d="M2 17C10 5 15 5 20 13C25 5 30 5 38 17"></path></svg></div></div><!-- HEADER SIMPLIFICADO Y TOTALMENTE RESPONSIVO --><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.03)] border-b border-outline-variant/15"><div class="h-14 sm:h-16 max-w-[1280px] mx-auto px-3 sm:px-6 md:px-8 flex items-center justify-between gap-2"><div class="flex items-center gap-2 sm:gap-3 min-w-0"><div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary-container flex-shrink-0 flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[17px] sm:text-[19px]">local_florist</span></div><span class="font-romantic text-xl sm:text-2xl md:text-3xl text-primary font-bold tracking-tight truncate drop-shadow-sm">Para Arly: Nuestro Ramo de Amor</span></div><div class="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 rounded-full bg-surface-container/80 border border-outline-variant/30 text-secondary text-[11px] sm:text-label-sm font-sans-accent flex-shrink-0"><span class="material-symbols-outlined text-[14px] sm:text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span><span class="font-semibold">Hogar &amp; Familia</span></div></div></header><main class="relative z-20 w-full pt-16 sm:pt-20 min-h-screen pb-32 sm:pb-36 md:pb-40"><div class="flex flex-col w-full relative min-h-[calc(100vh-140px)] overflow-hidden select-none font-sans-accent" id="experiencia-interactiva">
+<!-- Efectos Ambientales de Fondo y Brillos Flotantes -->
+<div class="pointer-events-none absolute inset-0 overflow-hidden z-0">
+<div class="absolute -top-12 -left-12 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-primary-container/20 blur-3xl"></div>
+<div class="absolute top-1/3 -right-20 w-72 sm:w-[450px] h-72 sm:h-[450px] rounded-full bg-secondary-fixed/30 blur-3xl"></div>
+<div class="absolute bottom-20 left-1/4 w-60 sm:w-80 h-60 sm:h-80 rounded-full bg-tertiary-fixed/20 blur-3xl"></div>
+</div>
+<!-- Contenedor de Confeti y Pétalos Cayendo (DOM Animado) -->
+<div class="pointer-events-none fixed inset-0 z-40 overflow-hidden" id="confetti-container"></div>
+<!-- ÁREA DE CONTENIDO PRINCIPAL: Layout centrado interactivo -->
+<div class="relative z-10 w-full max-w-[1100px] mx-auto px-3 sm:px-6 md:px-8 py-2 sm:py-4 flex flex-col items-center justify-between min-h-[calc(100vh-190px)]">
+<!-- BARRA SUPERIOR DE INFORMACIÓN Y AVANCE TOTALMENTE RESPONSIVA -->
+<header class="w-full flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-4 pb-2">
+<div class="flex items-center gap-2 sm:gap-3 bg-surface-container-lowest/90 backdrop-blur-md px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-sm border border-outline-variant/20 max-w-full truncate">
+<span class="material-symbols-outlined text-primary text-[18px] sm:text-[20px] flex-shrink-0" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<span class="font-sans-accent text-xs sm:text-body-sm text-on-surface-variant font-medium truncate">
+          Cálculo Estructural de Amor • <strong class="text-on-surface font-semibold">Arly &amp; Antonio</strong>
+</span>
+</div>
+<!-- Progreso visual de las 5 rosas -->
+<div class="flex items-center gap-2 bg-surface-container-lowest/90 backdrop-blur-md px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-sm border border-outline-variant/20">
+<span class="font-sans-accent text-[11px] sm:text-label-sm text-secondary uppercase tracking-wider font-semibold">Flores Plantadas:</span>
+<div class="flex items-center gap-1.5" id="progress-dots">
+<div class="step-dot w-2.5 h-2.5 rounded-full bg-surface-container-high transition-all duration-500" data-step="1"></div>
+<div class="step-dot w-2.5 h-2.5 rounded-full bg-surface-container-high transition-all duration-500" data-step="2"></div>
+<div class="step-dot w-2.5 h-2.5 rounded-full bg-surface-container-high transition-all duration-500" data-step="3"></div>
+<div class="step-dot w-2.5 h-2.5 rounded-full bg-surface-container-high transition-all duration-500" data-step="4"></div>
+<div class="step-dot w-2.5 h-2.5 rounded-full bg-surface-container-high transition-all duration-500" data-step="5"></div>
+</div>
+<span class="font-sans-accent text-xs sm:text-label-sm font-semibold text-primary ml-1" id="step-counter-text">0/5</span>
+</div>
+</header>
+<!-- ESCENARIO DINÁMICO DE TARJETAS (Glassmorphism cálido) -->
+<div class="w-full flex flex-col items-center justify-center my-auto relative min-h-[340px] sm:min-h-[380px]">
+<!-- ESTADO 0: PANTALLA INICIAL DE BIENVENIDA -->
+<section class="w-[94%] sm:w-full max-w-lg md:max-w-xl lg:max-w-2xl aura-glow rounded-[1.8rem] sm:rounded-[2.2rem] md:rounded-[2.5rem] transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] transform translate-y-0 opacity-100 scale-100" id="card-welcome">
+<div class="relative bg-surface-container-lowest/92 backdrop-blur-xl rounded-[1.8rem] sm:rounded-[2.2rem] md:rounded-[2.5rem] p-5 sm:p-8 md:p-10 text-center shadow-xl border border-white/70 overflow-hidden">
+<div class="absolute -top-10 -right-10 w-36 h-36 bg-primary-container/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-36 h-36 bg-secondary-fixed/40 rounded-full blur-2xl pointer-events-none"></div>
+<div class="inline-flex items-center justify-center w-13 h-13 sm:w-16 sm:h-16 rounded-full bg-primary-container text-on-primary-container shadow-md mb-3 sm:mb-4 mx-auto p-3">
+<span class="material-symbols-outlined text-[28px] sm:text-[34px]" style="font-variation-settings: 'FILL' 1;">local_florist</span>
+</div>
+<div>
+<span class="inline-block px-3 py-1 bg-surface-container text-secondary text-[11px] sm:text-label-sm rounded-full font-semibold uppercase tracking-wider mb-2">
+            Obra Maestra Dedicada
+          </span>
+</div>
+<h1 class="font-romantic text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary font-bold leading-tight mb-3 drop-shadow-sm">
+            Para Arly: Nuestro Ramo de Amor
+          </h1>
+<p class="font-sans-accent text-sm sm:text-base md:text-lg text-on-surface-variant max-w-md mx-auto mb-6 sm:mb-8 leading-relaxed">
+            A la ingeniera civil más brillante, mujer de mi vida y la mamá más dulce y amorosa de nuestra pequeña <strong class="text-on-surface">Arya</strong>. Cada flor amarilla representa una viga indestructible de nuestra felicidad.
+          </p>
+<button class="group relative inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-9 py-3 sm:py-3.5 rounded-full bg-gradient-to-r from-primary-container via-primary-fixed to-secondary-container text-on-secondary-container font-sans-accent text-base sm:text-body-lg font-bold shadow-lg hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300" id="btn-start" type="button">
+<span>Comenzar la Obra</span>
+<span class="text-lg sm:text-xl group-hover:rotate-12 transition-transform duration-300">🏗️💛</span>
+<div class="absolute inset-0 rounded-full bg-surface-container-lowest/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</button>
+</div>
+</section>
+<!-- TARJETAS POÉTICAS SECUENCIALES (Pasos 1 a 5) -->
+<section class="w-[94%] sm:w-full max-w-lg md:max-w-xl lg:max-w-2xl aura-glow rounded-[1.8rem] sm:rounded-[2.2rem] md:rounded-[2.5rem] hidden transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] transform translate-y-6 opacity-0 scale-95" id="card-steps">
+<div class="relative bg-surface-container-lowest/94 backdrop-blur-xl rounded-[1.8rem] sm:rounded-[2.2rem] md:rounded-[2.5rem] p-5 sm:p-8 md:p-9 shadow-2xl border border-white/70">
+<!-- Encabezado de la tarjeta con Badge e Ícono -->
+<div class="flex items-center justify-between border-b border-surface-variant/40 pb-3 sm:pb-4 mb-4 sm:mb-5">
+<div class="flex items-center gap-2.5 sm:gap-3">
+<div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-primary-container/60 text-primary flex items-center justify-center shadow-sm flex-shrink-0" id="step-icon-wrapper">
+<span class="material-symbols-outlined text-[24px] sm:text-[28px]" id="step-icon" style="font-variation-settings: 'FILL' 1;">foundation</span>
+</div>
+<div>
+<span class="font-sans-accent text-[11px] sm:text-label-sm uppercase tracking-wider text-secondary font-semibold" id="step-subtitle">Paso 1 de 5</span>
+<h2 class="font-romantic text-2xl sm:text-3xl md:text-4xl text-primary font-bold leading-tight" id="step-title">Cimientos Indestructibles</h2>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-1 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<!-- Mensaje poético -->
+<div class="min-h-[90px] sm:min-h-[110px] flex items-center mb-5 sm:mb-6">
+<p class="font-sans-accent text-sm sm:text-base md:text-lg text-on-surface leading-relaxed" id="step-text">
+              El cálculo estructural más perfecto no se hizo en AutoCAD ni en concreto armado; nació el día que decidimos construir una vida juntos.
+            </p>
+</div>
+<!-- Pie de tarjeta con botón y toque global -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 pt-3 border-t border-surface-variant/30">
+<div class="flex items-center gap-1.5 sm:gap-2 text-on-surface-variant/75 text-xs sm:text-body-sm text-center sm:text-left">
+<span class="material-symbols-outlined text-[16px] sm:text-[18px] text-primary">touch_app</span>
+<span>Toca la pantalla o presiona el botón</span>
+</div>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-secondary-container font-sans-accent text-sm sm:text-label-lg font-bold shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-95 transition-all" id="btn-next-step" type="button">
+<span id="btn-next-text">Plantar Rosa Siguiente</span>
+<span class="text-base sm:text-lg">🌹✨</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ESTADO FINAL: RAMO ELEVADO, LISTÓN ROJO Y CARTA DORADA -->
+<section class="w-[94%] sm:w-full max-w-lg md:max-w-xl lg:max-w-2xl aura-glow rounded-[1.8rem] sm:rounded-[2.2rem] md:rounded-[2.5rem] hidden transition-all duration-1000 ease-[cubic-bezier(0.34,1.56,0.64,1)] transform translate-y-8 opacity-0 scale-95" id="card-final">
+<div class="relative bg-surface-container-lowest/94 backdrop-blur-xl rounded-[1.8rem] sm:rounded-[2.2rem] md:rounded-[2.5rem] p-5 sm:p-8 md:p-10 text-center shadow-2xl border border-white/70 overflow-hidden">
+<div class="absolute -top-16 -left-16 w-48 h-48 bg-primary-container/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-16 -right-16 w-48 h-48 bg-secondary-fixed/40 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Sello / Medalla de Amor -->
+<div class="inline-flex items-center justify-center px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full bg-primary-container/50 text-secondary text-xs sm:text-label-sm font-semibold mb-3 sm:mb-4 mx-auto gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[15px] sm:text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Obra Concluida con Amor Eterno</span>
+</div>
+<h2 class="font-romantic text-2xl sm:text-4xl md:text-5xl text-primary font-bold mb-2 sm:mb-3 drop-shadow-sm leading-tight">
+            ¡Nuestro Ramo está Completo, Arly!
+          </h2>
+<div class="my-4 sm:my-5 p-4 sm:p-6 rounded-2xl bg-surface-container-low/75 backdrop-blur-sm text-left relative overflow-hidden shadow-inner border border-outline-variant/20">
+<div class="absolute top-1 right-2 sm:top-2 sm:right-3 opacity-15 text-primary pointer-events-none">
+<span class="material-symbols-outlined text-[60px] sm:text-[80px]">format_quote</span>
+</div>
+<p class="font-romantic text-xl sm:text-2xl md:text-3xl text-on-surface leading-snug mb-3">
+              "Arly, eres el pilar de mi vida y la mamá más extraordinaria para Arya. Te amo con cada partícula de mi ser."
+            </p>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2 pt-2 sm:pt-3 border-t border-outline-variant/40">
+<span class="font-sans-accent text-xs sm:text-body-sm text-on-surface-variant font-medium">Familia &amp; Cimientos</span>
+<span class="font-romantic text-xl sm:text-2xl text-secondary font-bold">— Con todo mi amor, Antonio ❤️</span>
+</div>
+</div>
+<!-- Galería de Hitos (Arya, Ingeniería, Hogar) -->
+<div class="grid grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-6">
+<div class="bg-surface-container/60 rounded-xl p-2 sm:p-3 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-[18px] sm:text-[22px]" style="font-variation-settings: 'FILL' 1;">child_friendly</span>
+<span class="font-sans-accent text-xs sm:text-label-sm font-semibold text-on-surface mt-1">Arya</span>
+<span class="font-sans-accent text-on-surface-variant text-[10px] sm:text-[11px] leading-tight">1 año 2 meses</span>
+</div>
+<div class="bg-surface-container/60 rounded-xl p-2 sm:p-3 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-[18px] sm:text-[22px]" style="font-variation-settings: 'FILL' 1;">home_work</span>
+<span class="font-sans-accent text-xs sm:text-label-sm font-semibold text-on-surface mt-1">Ingeniera Civil</span>
+<span class="font-sans-accent text-on-surface-variant text-[10px] sm:text-[11px] leading-tight">Nuestra Guía</span>
+</div>
+<div class="bg-surface-container/60 rounded-xl p-2 sm:p-3 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-tertiary text-[18px] sm:text-[22px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-sans-accent text-xs sm:text-label-sm font-semibold text-on-surface mt-1">Amor Eterno</span>
+<span class="font-sans-accent text-on-surface-variant text-[10px] sm:text-[11px] leading-tight">Sin Fin</span>
+</div>
+</div>
+<!-- Botón de Reinicio -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+<button class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-sans-accent text-sm sm:text-label-lg font-semibold shadow-sm hover:scale-105 active:scale-95 transition-all" id="btn-restart" type="button">
+<span>Revivir la Obra</span>
+<span class="material-symbols-outlined text-[16px] sm:text-[18px]">replay</span>
+</button>
+</div>
+<!-- Crédito Requerido -->
+<div class="mt-5 sm:mt-8 pt-3 sm:pt-4 border-t border-outline-variant/30 text-center">
+<p class="font-sans-accent text-xs sm:text-label-sm text-on-surface-variant/80 tracking-wide">
+              Hecho con tecnología de <span class="font-semibold text-secondary">Andejecruher</span>
+</p>
+</div>
+</div>
+</section>
+</div>
+<!-- ESCENARIO VISUAL DEL RAMO DE FLORES AMARILLAS (En abanico inferior) -->
+<div class="relative w-full max-w-2xl sm:max-w-3xl h-48 sm:h-56 md:h-64 mt-1 flex items-end justify-center pointer-events-none transition-all duration-1000 ease-in-out" id="bouquet-stage">
+<!-- Contenedor central donde brotan las 5 rosas -->
+<div class="relative w-full h-full flex items-end justify-center" id="bouquet-center">
+<!-- Las 5 rosas se instancian aquí mediante script con SVG hiperrealista y detallado -->
+</div>
+<!-- LISTÓN ROJO ELEGANTE (SVG animado con lazo y moño ondulante para el estado final) -->
+<div class="absolute bottom-4 sm:bottom-6 z-30 transition-all duration-700 transform scale-0 opacity-0 flex flex-col items-center" id="red-ribbon">
+<svg class="w-28 sm:w-36 h-22 sm:h-28 filter drop-shadow-lg" fill="none" viewbox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+<!-- Sombras y lazo posterior -->
+<path d="M50 45 C30 20 10 30 18 55 C26 75 60 65 72 56 Z" fill="#DC2626"></path>
+<path d="M110 45 C130 20 150 30 142 55 C134 75 100 65 88 56 Z" fill="#DC2626"></path>
+<!-- Cintas colgantes ondeantes -->
+<path d="M72 65 C65 85 50 105 40 115 C48 108 65 95 76 72 Z" fill="#B91C1C"></path>
+<path d="M88 65 C95 85 110 105 120 115 C112 108 95 95 84 72 Z" fill="#991B1B"></path>
+<!-- Lazo frontal brillante -->
+<path d="M52 46 C34 26 18 35 24 53 C30 68 62 60 74 53 Z" fill="#EF4444"></path>
+<path d="M108 46 C126 26 142 35 136 53 C130 68 98 60 86 53 Z" fill="#F87171"></path>
+<!-- Moño central / Broche -->
+<ellipse cx="80" cy="54" fill="#DC2626" rx="14" ry="12"></ellipse>
+<ellipse cx="80" cy="54" fill="#EF4444" rx="11" ry="9"></ellipse>
+<circle cx="77" cy="51" fill="#FECACA" r="3"></circle>
+<path d="M68 54 C72 62 88 62 92 54" stroke="#7F1D1D" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+</div>
+</div>
+<!-- Indicador Flotante Global para Clics con margen seguro responsive -->
+<div class="opacity-90 transition-opacity duration-300 py-1 mb-2 sm:mb-1 text-center" id="tap-hint">
+<span class="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-surface-container-lowest/90 text-on-surface-variant font-sans-accent text-xs sm:text-label-sm shadow-sm backdrop-blur-sm border border-outline-variant/20">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span>Haz clic en la pantalla para hacer brotar flores amarillas</span>
+</span>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    // Banco de datos y contenido poético para las 5 rosas
+    const STEPS_DATA = [
+      {
+        step: 1,
+        title: "Cimientos Indestructibles",
+        subtitle: "Paso 1 de 5 • Estructura",
+        icon: "foundation",
+        text: "El cálculo estructural más perfecto no se hizo en AutoCAD ni en concreto armado; nació el día que decidimos construir una vida juntos.",
+        angle: -30,
+        xOffsetRatio: -0.22,
+        scale: 0.95
+      },
+      {
+        step: 2,
+        title: "Nuestra Mayor Obra de Arte",
+        subtitle: "Paso 2 de 5 • Maternidad Dulce",
+        icon: "child_care",
+        text: "Ver cómo guías, amas y cuidas a nuestra pequeña Arya (1 año y 2 meses) me confirma que eres la ingeniera más tierna y admirable del mundo.",
+        angle: -15,
+        xOffsetRatio: -0.11,
+        scale: 1.02
+      },
+      {
+        step: 3,
+        title: "Puentes de Ternura",
+        subtitle: "Paso 3 de 5 • Vínculo Infinito",
+        icon: "diversity_1",
+        text: "Eres el soporte que equilibra cada esfuerzo, el peralte que desafía cualquier curva difícil y el puente más sólido que une nuestros corazones.",
+        angle: 0,
+        xOffsetRatio: 0,
+        scale: 1.12
+      },
+      {
+        step: 4,
+        title: "Planos de Felicidad",
+        subtitle: "Paso 4 de 5 • Proyecto de Vida",
+        icon: "architecture",
+        text: "Ninguna obra civil tiene tantas especificaciones de perfección como la dulzura con la que iluminas nuestro hogar cada mañana.",
+        angle: 15,
+        xOffsetRatio: 0.11,
+        scale: 1.02
+      },
+      {
+        step: 5,
+        title: "Flores para mi Ingeniera",
+        subtitle: "Paso 5 de 5 • Ramo Infinito",
+        icon: "local_florist",
+        text: "Un ramo de rosas amarillas infinitas para la mujer que edifica mis sueños y llena de luz la vida de Arya y la mía.",
+        angle: 30,
+        xOffsetRatio: 0.22,
+        scale: 0.95
+      }
+    ];
+
+    let currentStep = 0; // 0 = bienvenida, 1-5 = pasos, 6 = ramo terminado
+    const totalSteps = 5;
+
+    // Elementos DOM
+    const containerInteractive = document.getElementById('experiencia-interactiva');
+    const cardWelcome = document.getElementById('card-welcome');
+    const cardSteps = document.getElementById('card-steps');
+    const cardFinal = document.getElementById('card-final');
+    const btnStart = document.getElementById('btn-start');
+    const btnNext = document.getElementById('btn-next-step');
+    const btnRestart = document.getElementById('btn-restart');
+    const btnNextText = document.getElementById('btn-next-text');
+    const bouquetCenter = document.getElementById('bouquet-center');
+    const bouquetStage = document.getElementById('bouquet-stage');
+    const redRibbon = document.getElementById('red-ribbon');
+    const stepTitle = document.getElementById('step-title');
+    const stepSubtitle = document.getElementById('step-subtitle');
+    const stepText = document.getElementById('step-text');
+    const stepIcon = document.getElementById('step-icon');
+    const stepCounterText = document.getElementById('step-counter-text');
+    const progressDots = document.querySelectorAll('.step-dot');
+    const tapHint = document.getElementById('tap-hint');
+    const confettiContainer = document.getElementById('confetti-container');
+
+    // Calcular offset responsivo de rosas según el ancho disponible
+    function getResponsiveOffset(ratio) {
+      const stageWidth = bouquetStage ? bouquetStage.offsetWidth : 400;
+      return Math.round(ratio * Math.min(stageWidth, 420));
+    }
+
+    // Generador SVG de Rosa Amarilla Detallada
+    function createYellowRoseSVG(angle, xOffsetRatio, scale, index) {
+      const roseWrapper = document.createElement('div');
+      roseWrapper.className = 'absolute bottom-0 origin-bottom transition-all duration-700 ease-out transform';
+      roseWrapper.id = `rose-${index}`;
+      const xOffset = getResponsiveOffset(xOffsetRatio);
+      roseWrapper.style.left = `calc(50% + ${xOffset}px)`;
+      roseWrapper.style.transform = `translateX(-50%) rotate(${angle}deg) scale(0)`;
+      roseWrapper.style.opacity = '0';
+      roseWrapper.style.zIndex = index === 3 ? '25' : (index === 2 || index === 4 ? '20' : '15');
+
+      roseWrapper.innerHTML = `
+        <svg class="w-20 sm:w-24 md:w-28 h-48 sm:h-56 md:h-64 filter drop-shadow-md overflow-visible" viewBox="0 0 100 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 85 Q${48 + (angle > 0 ? 5 : -5)} 140 50 220" stroke="#006D30" stroke-width="5" stroke-linecap="round"/>
+          <path d="M51 86 Q${49 + (angle > 0 ? 5 : -5)} 140 51 220" stroke="#84E696" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M48 135 L42 131 L48 133 Z" fill="#005323"/>
+          <path d="M52 165 L58 162 L52 164 Z" fill="#005323"/>
+          <g transform="translate(${angle > 0 ? '51, 125' : '49, 125'})">
+            <path d="M0 0 C${angle > 0 ? '25 -8' : '-25 -8'} ${angle > 0 ? '35 15' : '-35 15'} 0 20 Z" fill="#006D30"/>
+            <path d="M0 0 C${angle > 0 ? '20 -5' : '-20 -5'} ${angle > 0 ? '30 12' : '-30 12'} 0 18 Z" fill="#79DB8D"/>
+            <line x1="0" y1="2" x2="${angle > 0 ? '24' : '-24'}" y2="8" stroke="#005323" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(${angle > 0 ? '49, 160' : '51, 160'})">
+            <path d="M0 0 C${angle > 0 ? '-22 -6' : '22 -6'} ${angle > 0 ? '-30 12' : '30 12'} 0 16 Z" fill="#006D30"/>
+            <path d="M0 0 C${angle > 0 ? '-18 -4' : '18 -4'} ${angle > 0 ? '-25 10' : '25 10'} 0 14 Z" fill="#84E696"/>
+          </g>
+          <path d="M42 85 C38 78 32 74 25 78 C35 84 42 86 45 88 Z" fill="#006D30"/>
+          <path d="M58 85 C62 78 68 74 75 78 C65 84 58 86 55 88 Z" fill="#006D30"/>
+          <path d="M47 88 C49 95 50 98 50 102 C51 98 52 95 54 88 Z" fill="#005323"/>
+          <path d="M50 82 C22 82 20 54 36 40 C42 56 46 76 50 82 Z" fill="#FACC15"/>
+          <path d="M50 82 C78 82 80 54 64 40 C58 56 54 76 50 82 Z" fill="#EAB308"/>
+          <path d="M30 52 C26 34 46 22 50 36 C42 38 34 44 30 52 Z" fill="#FEF08A"/>
+          <path d="M70 52 C74 34 54 22 50 36 C58 38 66 44 70 52 Z" fill="#FDE047"/>
+          <ellipse cx="50" cy="50" rx="20" ry="24" fill="#FACC15"/>
+          <path d="M35 55 C35 38 48 30 58 35 C64 42 58 58 50 64 C42 64 35 60 35 55 Z" fill="#FE932C"/>
+          <path d="M62 48 C62 36 50 30 42 36 C38 42 45 54 50 58 C56 58 62 54 62 48 Z" fill="#FACC15"/>
+          <path d="M44 45 C44 40 50 37 54 40 C57 43 54 48 50 49 C47 49 45 47 45 45" stroke="#904D00" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="50" cy="45" r="4" fill="#FE932C"/>
+          <circle cx="42" cy="42" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+          <circle cx="57" cy="56" r="1.2" fill="#FFFFFF" opacity="0.85"/>
+        </svg>
+      `;
+
+      return roseWrapper;
+    }
+
+    // Actualizar los puntos de avance
+    function updateProgressIndicators(step) {
+      stepCounterText.textContent = `${Math.min(step, 5)}/5`;
+      progressDots.forEach(dot => {
+        const dotStep = parseInt(dot.getAttribute('data-step'), 10);
+        if (dotStep <= step) {
+          dot.className = 'step-dot w-4 sm:w-5 h-2 sm:h-2.5 rounded-full bg-primary-container shadow-sm transition-all duration-500 scale-105';
+        } else {
+          dot.className = 'step-dot w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-surface-container-high transition-all duration-500';
+        }
+      });
+    }
+
+    // Plantar una rosa y animarla
+    function plantRose(stepIndex) {
+      const data = STEPS_DATA[stepIndex - 1];
+      if (!data) return;
+
+      let roseEl = document.getElementById(`rose-${stepIndex}`);
+      if (!roseEl) {
+        roseEl = createYellowRoseSVG(data.angle, data.xOffsetRatio, data.scale, stepIndex);
+        bouquetCenter.appendChild(roseEl);
+      }
+
+      const xOffset = getResponsiveOffset(data.xOffsetRatio);
+      roseEl.style.left = `calc(50% + ${xOffset}px)`;
+
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          roseEl.style.transform = `translateX(-50%) rotate(${data.angle}deg) scale(${data.scale})`;
+          roseEl.style.opacity = '1';
+        }, 50);
+      });
+
+      createSparkle(window.innerWidth / 2 + xOffset, window.innerHeight - 150);
+    }
+
+    // Ajustar posiciones de rosas al cambiar tamaño de ventana
+    window.addEventListener('resize', () => {
+      for (let i = 1; i <= currentStep && i <= totalSteps; i++) {
+        const roseEl = document.getElementById(`rose-${i}`);
+        const data = STEPS_DATA[i - 1];
+        if (roseEl && data) {
+          const xOffset = getResponsiveOffset(data.xOffsetRatio);
+          roseEl.style.left = `calc(50% + ${xOffset}px)`;
+        }
+      }
+    });
+
+    // Efecto de chispas doradas al brotar una rosa
+    function createSparkle(x, y) {
+      for (let i = 0; i < 8; i++) {
+        const spark = document.createElement('div');
+        spark.className = 'pointer-events-none fixed z-50 rounded-full bg-primary-container';
+        const size = Math.random() * 8 + 4;
+        spark.style.width = `${size}px`;
+        spark.style.height = `${size}px`;
+        spark.style.left = `${x}px`;
+        spark.style.top = `${y}px`;
+        spark.style.boxShadow = '0 0 10px #FACC15';
+        document.body.appendChild(spark);
+
+        const angle = Math.random() * Math.PI * 2;
+        const velocity = Math.random() * 60 + 20;
+        const dx = Math.cos(angle) * velocity;
+        const dy = Math.sin(angle) * velocity - 20;
+
+        spark.animate([
+          { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+          { transform: `translate(${dx}px, ${dy}px) scale(0)`, opacity: 0 }
+        ], {
+          duration: 700 + Math.random() * 300,
+          easing: 'cubic-bezier(0.1, 0.8, 0.3, 1)'
+        }).onfinish = () => spark.remove();
+      }
+    }
+
+    // Transición fluida y poética entre tarjetas con cubic-bezier refinado
+    function transitionCard(fromEl, toEl, setupCallback) {
+      fromEl.style.transition = 'opacity 0.38s cubic-bezier(0.4, 0, 0.2, 1), transform 0.38s cubic-bezier(0.4, 0, 0.2, 1)';
+      fromEl.style.opacity = '0';
+      fromEl.style.transform = 'translateY(-16px) scale(0.96)';
+
+      setTimeout(() => {
+        fromEl.classList.add('hidden');
+        if (setupCallback) setupCallback();
+        toEl.classList.remove('hidden');
+        toEl.style.transition = 'opacity 0.65s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        toEl.style.opacity = '0';
+        toEl.style.transform = 'translateY(22px) scale(0.95)';
+
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            toEl.style.opacity = '1';
+            toEl.style.transform = 'translateY(0) scale(1)';
+          }, 30);
+        });
+      }, 360);
+    }
+
+    function showStepCard(step) {
+      const data = STEPS_DATA[step - 1];
+      if (!data) return;
+
+      // Animar suavemente el contenido interior si ya está visible cardSteps
+      cardSteps.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+      cardSteps.style.opacity = '0.15';
+      cardSteps.style.transform = 'translateY(-6px) scale(0.985)';
+
+      setTimeout(() => {
+        stepIcon.textContent = data.icon;
+        stepTitle.textContent = data.title;
+        stepSubtitle.textContent = data.subtitle;
+        stepText.textContent = data.text;
+
+        if (step === totalSteps) {
+          btnNextText.textContent = "Atar Ramo de Amor Final";
+        } else {
+          btnNextText.textContent = "Plantar Rosa Siguiente";
+        }
+
+        cardSteps.style.transition = 'opacity 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        cardSteps.style.opacity = '1';
+        cardSteps.style.transform = 'translateY(0) scale(1)';
+      }, 250);
+    }
+
+    // Efecto de Confeti y Pétalos Amarillos para el Estado Final
+    function launchGoldenCelebration() {
+      const colors = ['#FACC15', '#FFE083', '#FE932C', '#FFFFFF', '#EF4444', '#FDE047'];
+      const count = window.innerWidth < 640 ? 45 : 75;
+
+      for (let i = 0; i < count; i++) {
+        setTimeout(() => {
+          const petal = document.createElement('div');
+          petal.className = 'absolute rounded-full pointer-events-none opacity-90';
+          const size = Math.random() * 12 + 7;
+          petal.style.width = `${size}px`;
+          petal.style.height = `${size * 1.4}px`;
+          petal.style.left = `${Math.random() * 100}vw`;
+          petal.style.top = '-20px';
+          petal.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          petal.style.borderRadius = '50% 10% 50% 50%';
+          petal.style.boxShadow = '0 2px 6px rgba(0,0,0,0.08)';
+
+          confettiContainer.appendChild(petal);
+
+          const drift = (Math.random() - 0.5) * 200;
+          const rotate = Math.random() * 720;
+          const duration = Math.random() * 3500 + 3000;
+
+          petal.animate([
+            { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
+            { transform: `translate(${drift}px, 105vh) rotate(${rotate}deg)`, opacity: 0 }
+          ], {
+            duration: duration,
+            easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+          }).onfinish = () => petal.remove();
+        }, i * 45);
+      }
+    }
+
+    // Mostrar el estado final triunfal
+    function triggerFinalState() {
+      currentStep = 6;
+      updateProgressIndicators(5);
+
+      transitionCard(cardSteps, cardFinal);
+      tapHint.classList.add('opacity-0');
+
+      bouquetStage.classList.add('-translate-y-4', 'sm:-translate-y-6', 'scale-105');
+
+      setTimeout(() => {
+        redRibbon.classList.remove('scale-0', 'opacity-0');
+        redRibbon.classList.add('scale-100', 'opacity-100');
+        launchGoldenCelebration();
+      }, 450);
+    }
+
+    // Avanzar de paso
+    function advanceStep() {
+      if (currentStep === 0) {
+        currentStep = 1;
+        transitionCard(cardWelcome, cardSteps, () => {
+          stepIcon.textContent = STEPS_DATA[0].icon;
+          stepTitle.textContent = STEPS_DATA[0].title;
+          stepSubtitle.textContent = STEPS_DATA[0].subtitle;
+          stepText.textContent = STEPS_DATA[0].text;
+          btnNextText.textContent = "Plantar Rosa Siguiente";
+        });
+
+        plantRose(1);
+        updateProgressIndicators(1);
+      } else if (currentStep >= 1 && currentStep < totalSteps) {
+        currentStep++;
+        plantRose(currentStep);
+        updateProgressIndicators(currentStep);
+        showStepCard(currentStep);
+      } else if (currentStep === totalSteps) {
+        triggerFinalState();
+      }
+    }
+
+    // Reiniciar toda la experiencia
+    function resetExperience() {
+      currentStep = 0;
+      updateProgressIndicators(0);
+
+      transitionCard(cardFinal, cardWelcome);
+
+      redRibbon.classList.remove('scale-100', 'opacity-100');
+      redRibbon.classList.add('scale-0', 'opacity-0');
+      bouquetStage.classList.remove('-translate-y-4', 'sm:-translate-y-6', 'scale-105');
+      bouquetCenter.innerHTML = '';
+      confettiContainer.innerHTML = '';
+      tapHint.classList.remove('opacity-0');
+    }
+
+    // EVENT LISTENERS
+    btnStart.addEventListener('click', (e) => {
+      e.stopPropagation();
+      advanceStep();
+    });
+
+    btnNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      advanceStep();
+    });
+
+    btnRestart.addEventListener('click', (e) => {
+      e.stopPropagation();
+      resetExperience();
+    });
+
+    // Clic global en pantalla para plantar flores (solo cuando la experiencia está en curso)
+    containerInteractive.addEventListener('click', (e) => {
+      if (e.target.closest('button') || e.target.closest('a')) return;
+      if (currentStep >= 1 && currentStep <= totalSteps) {
+        advanceStep();
+      }
+    });
+
+    updateProgressIndicators(0);
+  })();
+</script></main>
+<!-- PAISAJE INFERIOR: CASITA CAMPESTRE FAMILIAR Y MASCOTAS DETALLADAS CON MOVIMIENTO NATURAL PROPIO -->
+<footer class="fixed bottom-0 left-0 w-full pointer-events-none z-30 select-none">
+<div class="relative w-full h-24 sm:h-32 md:h-40 overflow-visible flex items-end justify-center">
+<!-- Cerca de madera de fondo rústico con espaciado responsive -->
+<div class="absolute bottom-0 inset-x-0 h-8 sm:h-10 md:h-12 flex justify-between sm:justify-around items-end px-1 sm:px-2 opacity-85 pointer-events-none z-10 overflow-hidden">
+<div class="w-2.5 sm:w-3 md:w-4 h-7 sm:h-9 md:h-11 bg-[#FBF7EE] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-8 sm:h-10 md:h-12 bg-[#F7F2E4] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-7 sm:h-9 md:h-11 bg-[#FBF7EE] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-8 sm:h-10 md:h-12 bg-[#F7F2E4] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-7 sm:h-9 md:h-11 bg-[#FBF7EE] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-8 sm:h-10 md:h-12 bg-[#F7F2E4] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-7 sm:h-9 md:h-11 bg-[#FBF7EE] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-8 sm:h-10 md:h-12 bg-[#F7F2E4] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-7 sm:h-9 md:h-11 bg-[#FBF7EE] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-8 sm:h-10 md:h-12 bg-[#F7F2E4] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-7 sm:h-9 md:h-11 bg-[#FBF7EE] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-8 sm:h-10 md:h-12 bg-[#F7F2E4] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-7 sm:h-9 md:h-11 bg-[#FBF7EE] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+<div class="w-2.5 sm:w-3 md:w-4 h-8 sm:h-10 md:h-12 bg-[#F7F2E4] rounded-t-sm shadow-sm border-t border-r border-[#E5DEC7]"></div>
+</div>
+<div class="absolute bottom-2 sm:bottom-3 md:bottom-4 inset-x-0 h-1.5 sm:h-2 bg-[#F5EED8] shadow-inner opacity-90 z-10"></div>
+<!-- ESCENARIO ILUSTRADO DE LA CASITA Y LAS MASCOTAS INTERCALADAS -->
+<div class="relative w-full max-w-[1360px] mx-auto h-22 sm:h-28 md:h-36 flex items-end justify-between px-1.5 sm:px-6 md:px-8 z-20 pointer-events-none">
+<!-- LADO IZQUIERDO: CASITA CAMPESTRE + CONEJITO CON BRINCOS + GATITO NEGRO SIGILOSO CON PECHERA BLANCA -->
+<div class="flex items-end gap-2 sm:gap-4 md:gap-6 relative pb-1 flex-shrink-0">
+<!-- Casita campestre acogedora con chimenea humeante y luz cálida -->
+<div class="relative w-20 sm:w-28 md:w-36 h-18 sm:h-24 md:h-32 filter drop-shadow-md">
+<!-- Humo animado de la chimenea -->
+<div class="absolute top-0 left-4 sm:left-6 w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-white/60 blur-xs smoke-puff-1"></div>
+<div class="absolute top-1 left-5 sm:left-7 w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-white/50 blur-xs smoke-puff-2"></div>
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">
+<!-- Chimenea -->
+<rect class="text-secondary fill-secondary" fill="#A855F7" height="26" rx="1.5" width="14" x="25" y="16"></rect>
+<rect fill="#78350F" height="5" rx="1" width="18" x="23" y="13"></rect>
+<!-- Techo rústico a dos aguas -->
+<polygon fill="#B45309" points="12,48 70,12 128,48"></polygon>
+<polygon fill="#D97706" points="18,48 70,16 122,48"></polygon>
+<!-- Paredes de la casita (madera y adobe cálido) -->
+<rect fill="#FEF3C7" height="66" rx="3" stroke="#FDE68A" stroke-width="1.5" width="96" x="22" y="46"></rect>
+<!-- Tablones decorativos -->
+<line stroke="#FDE68A" stroke-width="1" x1="23" x2="117" y1="68" y2="68"></line>
+<line stroke="#FDE68A" stroke-width="1" x1="23" x2="117" y1="90" y2="90"></line>
+<!-- Ventanita buhardilla redonda -->
+<circle cx="70" cy="34" fill="#FEF08A" r="9" stroke="#B45309" stroke-width="1.8"></circle>
+<line stroke="#B45309" stroke-width="1.2" x1="70" x2="70" y1="25" y2="43"></line>
+<line stroke="#B45309" stroke-width="1.2" x1="61" x2="79" y1="34" y2="34"></line>
+<!-- Ventana iluminada con cortinas -->
+<rect fill="#FACC15" height="24" rx="2" stroke="#B45309" stroke-width="1.5" width="22" x="32" y="58"></rect>
+<line stroke="#B45309" stroke-width="1" x1="43" x2="43" y1="58" y2="82"></line>
+<line stroke="#B45309" stroke-width="1" x1="32" x2="54" y1="70" y2="70"></line>
+<!-- Puerta de madera con arco y cerrojo -->
+<path d="M68 112 V72 C68 64 88 64 88 72 V112 Z" fill="#92400E"></path>
+<circle cx="73" cy="92" fill="#FDE047" r="1.8"></circle>
+<!-- Escalón y macetitas con flor -->
+<rect fill="#D97706" height="3" rx="1" width="28" x="64" y="110"></rect>
+<circle cx="98" cy="104" fill="#DC2626" r="5"></circle>
+<circle cx="106" cy="106" fill="#FACC15" r="4"></circle>
+<path d="M96 112 h16 v-4 h-16 z" fill="#B45309" rx="1"></path>
+</svg>
+</div>
+<!-- Conejito blanco tierno: Brincos curiosos de un lado a otro con pausas tiernas -->
+<div class="anim-bunny-move flex items-end">
+<div class="w-6 sm:w-8 md:w-10 h-8 sm:h-10 md:h-12 anim-breathe filter drop-shadow-sm pb-0.5">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 45 55" xmlns="http://www.w3.org/2000/svg">
+<!-- Orejitas con movimiento sutil -->
+<g class="anim-ears">
+<ellipse cx="19" cy="14" fill="#FFFFFF" rx="3.5" ry="12" stroke="#E5E7EB" stroke-width="1"></ellipse>
+<ellipse cx="19" cy="14" fill="#FBCFE8" rx="1.8" ry="8"></ellipse>
+<ellipse cx="27" cy="15" fill="#FFFFFF" rx="3.5" ry="12" stroke="#E5E7EB" stroke-width="1"></ellipse>
+<ellipse cx="27" cy="15" fill="#FBCFE8" rx="1.8" ry="8"></ellipse>
+</g>
+<!-- Cuerpo redondo esponjoso -->
+<ellipse cx="23" cy="40" fill="#FFFFFF" rx="14" ry="12" stroke="#E5E7EB" stroke-width="1"></ellipse>
+<!-- Colita pom-pom -->
+<circle cx="9" cy="41" fill="#F3F4F6" r="4"></circle>
+<!-- Cabeza -->
+<circle cx="23" cy="27" fill="#FFFFFF" r="9"></circle>
+<!-- Ojo tierno -->
+<circle cx="27" cy="25" fill="#1F2937" r="1.6"></circle>
+<circle cx="27.4" cy="24.4" fill="#FFFFFF" r="0.6"></circle>
+<!-- Naricita rosada y bigotes -->
+<circle cx="31" cy="27" fill="#F472B6" r="1.2"></circle>
+<line stroke="#9CA3AF" stroke-width="0.8" x1="31" x2="38" y1="27" y2="25"></line>
+<line stroke="#9CA3AF" stroke-width="0.8" x1="31" x2="37" y1="28" y2="30"></line>
+<!-- Patita delantera -->
+<ellipse cx="29" cy="48" fill="#FFFFFF" rx="4" ry="2.5"></ellipse>
+</svg>
+</div>
+</div>
+<!-- Gato negro con parche blanco en el pecho: Desplazamiento sigiloso, vaivén suave y pausas atentas -->
+<div class="anim-cat-move flex items-end">
+<div class="w-8 sm:w-10 md:w-13 h-11 sm:h-14 md:h-18 anim-breathe filter drop-shadow-sm pb-0.5">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 55 70" xmlns="http://www.w3.org/2000/svg">
+<!-- Cola curvada elegante -->
+<path class="anim-tail" d="M12 56 C2 52 0 38 6 32 C8 29 11 31 10 35 C6 44 14 50 18 53 Z" fill="#18181B"></path>
+<!-- Cuerpo negro esbelto -->
+<ellipse cx="28" cy="47" fill="#18181B" rx="14" ry="18"></ellipse>
+<!-- PECHERA BLANCA MUY VISIBLE Y DESTACADA -->
+<path d="M24 35 C28 35 34 38 34 45 C34 52 30 56 28 58 C26 56 22 52 22 45 C22 38 24 35 24 35 Z" fill="#FFFFFF"></path>
+<!-- Patitas delanteras negras -->
+<rect fill="#18181B" height="12" rx="2" width="4" x="23" y="55"></rect>
+<rect fill="#18181B" height="12" rx="2" width="4" x="29" y="55"></rect>
+<!-- Cabeza -->
+<circle cx="28" cy="26" fill="#18181B" r="11"></circle>
+<!-- Orejitas puntiagudas -->
+<polygon fill="#18181B" points="19,20 22,9 27,18"></polygon>
+<polygon fill="#F472B6" points="21,18 23,12 25,18"></polygon>
+<polygon fill="#18181B" points="37,20 34,9 29,18"></polygon>
+<polygon fill="#F472B6" points="35,18 33,12 31,18"></polygon>
+<!-- Ojos vivos almendrados verde-amarillo -->
+<ellipse cx="24" cy="25" fill="#A3E635" rx="2.5" ry="3"></ellipse>
+<ellipse cx="24" cy="25" fill="#000000" rx="0.8" ry="2.4"></ellipse>
+<ellipse cx="32" cy="25" fill="#A3E635" rx="2.5" ry="3"></ellipse>
+<ellipse cx="32" cy="25" fill="#000000" rx="0.8" ry="2.4"></ellipse>
+<!-- Naricita y hocico -->
+<polygon fill="#F472B6" points="28,29 27,31 29,31"></polygon>
+<!-- Bigotitos blancos delicados -->
+<line opacity="0.85" stroke="#FFFFFF" stroke-width="0.8" x1="22" x2="12" y1="30" y2="28"></line>
+<line opacity="0.85" stroke="#FFFFFF" stroke-width="0.8" x1="22" x2="13" y1="32" y2="33"></line>
+<line opacity="0.85" stroke="#FFFFFF" stroke-width="0.8" x1="34" x2="44" y1="30" y2="28"></line>
+<line opacity="0.85" stroke="#FFFFFF" stroke-width="0.8" x1="34" x2="43" y1="32" y2="33"></line>
+</svg>
+</div>
+</div>
+</div>
+<!-- LADO DERECHO: PITBULL NEGRO CON TROTE FIRME + PUG BEIGE CON CONTONEO + 2 GALLITOS Y 1 GALLINITA PICOTEANDO -->
+<div class="flex items-end gap-2 sm:gap-3.5 md:gap-5 relative pb-1 flex-shrink-0">
+<!-- Perrito Pitbull negro: Trote alegre, firme y seguro con balanceo -->
+<div class="anim-pitbull-move flex items-end">
+<div class="w-10 sm:w-13 md:w-16 h-12 sm:h-16 md:h-20 anim-breathe filter drop-shadow-sm pb-0.5">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 65 75" xmlns="http://www.w3.org/2000/svg">
+<!-- Cola -->
+<path class="anim-tail" d="M12 48 C6 44 4 36 6 32 C8 32 9 35 11 39 C13 43 16 46 18 48 Z" fill="#1F2937"></path>
+<!-- Cuerpo robusto y fuerte -->
+<ellipse cx="32" cy="48" fill="#18181B" rx="17" ry="18"></ellipse>
+<rect fill="#18181B" height="18" rx="3" width="6" x="22" y="55"></rect>
+<rect fill="#18181B" height="18" rx="3" width="6" x="36" y="55"></rect>
+<!-- Pecho sutilmente brillante -->
+<path d="M28 42 C32 42 36 44 36 50 C36 54 32 58 28 58 Z" fill="#27272A"></path>
+<!-- Collar cariñoso rojo con placa dorada -->
+<path d="M22 36 C28 41 38 41 44 36" stroke="#DC2626" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="33" cy="40" fill="#FACC15" r="2.2"></circle>
+<!-- Cuello y cabeza fuerte de pitbull -->
+<circle cx="34" cy="26" fill="#18181B" r="13"></circle>
+<!-- Hocico ancho noble -->
+<ellipse cx="37" cy="30" fill="#27272A" rx="7.5" ry="6"></ellipse>
+<ellipse cx="37" cy="27" fill="#09090B" rx="3" ry="2"></ellipse>
+<!-- Orejitas dobladas naturales y tiernas -->
+<path d="M23 20 C22 14 26 14 29 18 Z" fill="#111827"></path>
+<path d="M43 20 C46 14 42 14 39 18 Z" fill="#111827"></path>
+<!-- Ojos cálidos y nobles marrones -->
+<circle cx="30" cy="23" fill="#78350F" r="2"></circle>
+<circle cx="30.5" cy="22.5" fill="#FFFFFF" r="0.7"></circle>
+<circle cx="40" cy="23" fill="#78350F" r="2"></circle>
+<circle cx="40.5" cy="22.5" fill="#FFFFFF" r="0.7"></circle>
+</svg>
+</div>
+</div>
+<!-- Perrito Pug: Bamboleo rechoncho gracioso (waddle) y trote juguetón -->
+<div class="anim-pug-move flex items-end">
+<div class="w-9 sm:w-12 md:w-14 h-10 sm:h-13 md:h-16 anim-breathe filter drop-shadow-sm pb-0.5">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 55 60" xmlns="http://www.w3.org/2000/svg">
+<!-- Colita enroscada característica del Pug -->
+<path d="M12 36 C8 32 8 26 13 25 C17 24 18 28 15 31 Z" fill="#D4A373" stroke="#A77443" stroke-width="1.2"></path>
+<!-- Cuerpo rechoncho color arena / beige -->
+<ellipse cx="28" cy="40" fill="#E6CCB2" rx="15" ry="14"></ellipse>
+<!-- Patitas cortas -->
+<rect fill="#D4A373" height="11" rx="2.5" width="5" x="18" y="47"></rect>
+<rect fill="#D4A373" height="11" rx="2.5" width="5" x="33" y="47"></rect>
+<!-- Cabeza redondita -->
+<circle cx="33" cy="24" fill="#E6CCB2" r="12"></circle>
+<!-- Orejitas caídas negras/oscuras -->
+<path d="M23 18 C20 22 23 27 26 24 Z" fill="#292524"></path>
+<path d="M43 18 C46 22 43 27 40 24 Z" fill="#292524"></path>
+<!-- Máscara y hocico negro con arrugas -->
+<ellipse cx="34" cy="28" fill="#1C1917" rx="8" ry="6"></ellipse>
+<ellipse cx="34" cy="26" fill="#000000" rx="2.5" ry="1.8"></ellipse>
+<!-- Arruguitas en la frente -->
+<path d="M30 16 Q33 14 36 16" fill="none" stroke="#9C6644" stroke-width="1.2"></path>
+<path d="M31 19 Q33 17 35 19" fill="none" stroke="#9C6644" stroke-width="1.2"></path>
+<path d="M30 25 Q34 23 38 25" fill="none" stroke="#44403C" stroke-width="1"></path>
+<!-- Ojos grandes, saltones y tiernos -->
+<circle cx="28" cy="22" fill="#1C1917" r="3"></circle>
+<circle cx="28.8" cy="21.2" fill="#FFFFFF" r="1.1"></circle>
+<circle cx="39" cy="22" fill="#1C1917" r="3"></circle>
+<circle cx="39.8" cy="21.2" fill="#FFFFFF" r="1.1"></circle>
+<!-- Lengüita juguetona rosada -->
+<path d="M33 32 Q34 35 36 32" fill="none" stroke="#F472B6" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Aves de corral: Gallito 1, Gallinita cariñosa y Gallito 2 con pasitos rápidos y picoteo activo -->
+<div class="flex items-end gap-1 sm:gap-2 pb-0.5">
+<!-- Gallito 1: Pasitos rápidos hacia los lados y picoteo animado -->
+<div class="anim-rooster1-move flex items-end">
+<div class="w-6 sm:w-8 md:w-9 h-8 sm:h-11 md:h-13 filter drop-shadow-sm">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 40 50" xmlns="http://www.w3.org/2000/svg">
+<!-- Cola vistosa verde tornasol / azul -->
+<path d="M12 28 C6 20 5 12 12 8 C10 16 14 20 16 26 Z" fill="#065F46"></path>
+<path d="M10 26 C4 23 2 16 8 13 C8 19 12 23 15 26 Z" fill="#1E3A8A"></path>
+<!-- Cuerpo café rojizo brillante -->
+<ellipse cx="22" cy="30" fill="#B45309" rx="9" ry="8"></ellipse>
+<!-- Alas doradas -->
+<path d="M16 28 C20 28 24 33 22 36 C18 36 15 32 16 28 Z" fill="#D97706"></path>
+<!-- Patitas amarillas -->
+<line stroke="#F59E0B" stroke-width="1.5" x1="20" x2="19" y1="38" y2="47"></line>
+<line stroke="#F59E0B" stroke-width="1.5" x1="24" x2="25" y1="38" y2="47"></line>
+<!-- Cuello erguido y cabeza -->
+<path d="M22 28 C24 22 27 18 29 16 Z" fill="#DC2626"></path>
+<circle cx="28" cy="16" fill="#D97706" r="5"></circle>
+<!-- Cresta roja viva superior -->
+<path d="M26 12 C25 8 28 7 29 10 C30 7 33 8 32 12 Z" fill="#EF4444"></path>
+<!-- Barbilla roja colgante -->
+<circle cx="31" cy="20" fill="#EF4444" r="2"></circle>
+<!-- Pico amarillo y ojo -->
+<polygon fill="#FACC15" points="32,15 38,17 32,19"></polygon>
+<circle cx="29" cy="15" fill="#000000" r="1"></circle>
+</svg>
+</div>
+</div>
+<!-- Gallinita: Pequeños pasitos comedidos y cabeceo clásico de ave de corral -->
+<div class="anim-hen-move flex items-end">
+<div class="w-5 sm:w-7 md:w-8 h-6 sm:h-8 md:h-10 filter drop-shadow-sm">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 35 40" xmlns="http://www.w3.org/2000/svg">
+<!-- Cuerpo blanco/crema redondeado -->
+<ellipse cx="18" cy="24" fill="#F8FAFC" rx="10" ry="8" stroke="#E2E8F0" stroke-width="1"></ellipse>
+<!-- Alita suave -->
+<ellipse cx="16" cy="24" fill="#F1F5F9" rx="5" ry="4"></ellipse>
+<!-- Colita levantada -->
+<polygon fill="#E2E8F0" points="9,22 4,17 11,18"></polygon>
+<!-- Cabeza con crestita pequeña -->
+<circle cx="24" cy="18" fill="#F8FAFC" r="4.5"></circle>
+<path d="M23 14 C24 12 26 12 25 15 Z" fill="#EF4444"></path>
+<polygon fill="#F59E0B" points="27,17 32,19 27,20"></polygon>
+<circle cx="25" cy="17" fill="#1E293B" r="0.9"></circle>
+<!-- Barbillita -->
+<circle cx="27" cy="21" fill="#EF4444" r="1.2"></circle>
+<!-- Patitas escondidas entre pasto -->
+<line stroke="#F59E0B" stroke-width="1.2" x1="17" x2="16" y1="32" y2="38"></line>
+<line stroke="#F59E0B" stroke-width="1.2" x1="21" x2="22" y1="32" y2="38"></line>
+</svg>
+</div>
+</div>
+<!-- Gallito 2: Picoteando el pasto de un lado a otro con energía curiosa -->
+<div class="anim-rooster2-move flex items-end">
+<div class="w-6 sm:w-8 md:w-9 h-8 sm:h-11 md:h-13 filter drop-shadow-sm">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 40 50" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 28 C6 21 6 13 13 9 C11 16 15 21 17 26 Z" fill="#1E3A8A"></path>
+<path d="M9 25 C4 22 3 15 9 12 C9 18 13 22 16 25 Z" fill="#047857"></path>
+<ellipse cx="23" cy="29" fill="#78350F" rx="9" ry="8"></ellipse>
+<path d="M17 27 C21 27 25 32 23 35 C19 35 16 31 17 27 Z" fill="#EA580C"></path>
+<line stroke="#F59E0B" stroke-width="1.5" x1="21" x2="20" y1="37" y2="46"></line>
+<line stroke="#F59E0B" stroke-width="1.5" x1="25" x2="26" y1="37" y2="46"></line>
+<circle cx="29" cy="17" fill="#EA580C" r="5"></circle>
+<!-- Cresta roja doble -->
+<path d="M27 13 C26 9 29 8 30 11 C31 8 34 9 33 13 Z" fill="#DC2626"></path>
+<circle cx="32" cy="21" fill="#DC2626" r="2"></circle>
+<polygon fill="#FACC15" points="33,16 39,18 33,20"></polygon>
+<circle cx="30" cy="16" fill="#000000" r="1"></circle>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Olas de césped verde en capas con flores silvestres -->
+<svg class="absolute bottom-0 w-full h-10 sm:h-12 md:h-16 text-tertiary-container preserve-3d z-25" fill="none" preserveaspectratio="none" viewbox="0 0 1200 80">
+<path d="M0,80 L0,35 Q20,15 40,32 Q60,18 80,36 Q100,12 120,38 Q150,15 170,36 Q200,10 220,34 Q250,12 280,38 Q310,16 340,35 Q380,10 410,34 Q450,15 480,36 Q520,12 550,38 Q590,14 620,34 Q660,10 690,36 Q730,15 760,38 Q800,12 830,35 Q870,14 900,36 Q940,10 970,34 Q1010,14 1040,38 Q1080,12 1110,36 Q1150,15 1180,34 L1200,32 L1200,80 Z" fill="#79db8d"></path>
+<path d="M0,80 L0,48 Q30,28 60,46 Q110,24 150,48 Q210,26 270,49 Q330,22 390,47 Q450,28 510,48 Q570,24 630,49 Q690,26 750,47 Q810,22 870,49 Q930,26 990,48 Q1050,22 1110,47 Q1160,26 1200,45 L1200,80 Z" fill="#006d30" opacity="0.85"></path>
+<circle cx="75" cy="34" fill="#facc15" r="4"></circle>
+<circle cx="190" cy="30" fill="#ffffff" r="3.5"></circle>
+<circle cx="320" cy="32" fill="#fe932c" r="4"></circle>
+<circle cx="460" cy="28" fill="#ffffff" r="3.5"></circle>
+<circle cx="600" cy="30" fill="#facc15" r="4"></circle>
+<circle cx="740" cy="33" fill="#fe932c" r="3.5"></circle>
+<circle cx="880" cy="29" fill="#ffffff" r="4"></circle>
+<circle cx="1020" cy="32" fill="#facc15" r="3.5"></circle>
+<circle cx="1140" cy="31" fill="#ffffff" r="3.5"></circle>
+</svg>
+</div>
+</footer>
+</body></html>
